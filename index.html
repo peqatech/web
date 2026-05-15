@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PeqaTech — Building Premium Digital Experiences</title>
+  <meta name="description" content="PeqaTech by Ts. Nur Afeeqah — a digital studio specialising in premium web design, WordPress, and digital strategy. One-page sites from RM199. Remote, Malaysia."/>
+  <meta name="keywords" content="web design Malaysia, freelance web designer, WordPress, GitHub Pages, PeqaTech, Nur Afeeqah"/>
+  <meta name="author" content="Ts. Nur Afeeqah — PeqaTech"/>
+  <!-- Open Graph -->
+  <meta property="og:title" content="PeqaTech — Building Premium Digital Experiences"/>
+  <meta property="og:description" content="Premium web design from RM199. Powered by AI tools and creative passion. By Ts. Nur Afeeqah."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://peqatech.github.io/"/>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="PeqaTech — Building Premium Digital Experiences"/>
+  <meta name="twitter:description" content="Premium web design from RM199. By Ts. Nur Afeeqah."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="header">
+    <a href="#" class="logo" id="logoLink">
+      <span class="logo-mark">Peqa</span><span class="logo-text">Tech</span>
+    </a>
+    <nav class="nav-desktop">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="https://wa.me/60166013291" target="_blank" rel="noopener" class="btn-header">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp Us
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="nav-drawer" id="navDrawer">
+    <a href="#about"        class="drawer-link">About</a>
+    <a href="#portfolio"    class="drawer-link">Portfolio</a>
+    <a href="#pricing"      class="drawer-link">Pricing</a>
+    <a href="#testimonials" class="drawer-link">Testimonials</a>
+    <a href="#contact"      class="drawer-link">Contact</a>
+    <a href="https://wa.me/60166013291" target="_blank" rel="noopener" class="drawer-link drawer-cta">💬 WhatsApp Us</a>
+  </nav>
+
+  <!-- ═══ SCROLL SCENE (Apple-style pinned) ═══ -->
+  <div class="scroll-scene" id="scrollScene" data-hero="hero">
+    <!-- This is the sticky viewport that stays fixed while we scroll through the scene -->
+    <div class="scene-stage" id="sceneStage">
+
+      <!-- Dark background overlay — fades out with headline -->
+      <div class="scene-bg" id="sceneBg"></div>
+
+      <!-- Background layers -->
+      <div class="hero-grid"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="mouse-glow" id="mouseGlow"></div>
+
+      <!-- Floating data cards (fade out during scene) -->
+      <div class="hero-float-card hfc-1" id="hfc1" aria-hidden="true">
+        <div class="hfc-label">Starting From</div>
+        <div class="hfc-value">RM 199</div>
+        <div class="hfc-sub">One-time payment</div>
+      </div>
+      <div class="hero-float-card hfc-2" id="hfc2" aria-hidden="true">
+        <div class="hfc-label">Client Satisfaction</div>
+        <div class="hfc-value">100%</div>
+        <div class="hfc-stars">★★★★★</div>
+      </div>
+      <div class="hero-float-card hfc-3" id="hfc3" aria-hidden="true">
+        <div class="hfc-label">✅ SSM Registered</div>
+        <div class="hfc-value">PG0510758-T</div>
+        <div class="hfc-sub">Since 2018</div>
+      </div>
+      <div class="hero-float-card hfc-4" id="hfc4" aria-hidden="true">
+        <div class="hfc-label">Experience</div>
+        <div class="hfc-value">7+ Years</div>
+        <div class="hfc-sub">Web Design</div>
+      </div>
+
+
+      <!-- Supporting content -->
+      <div class="scene-support" id="sceneSupport">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for new projects
+        </div>
+        <p class="hero-sub">
+          We craft high-performance websites and digital products<br>for businesses that refuse to settle for ordinary.
+        </p>
+        <div class="hero-btns">
+          <a href="#portfolio" class="btn-primary">
+            <span>View Our Work</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/60166013291" target="_blank" rel="noopener" class="btn-ghost">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Get in Touch
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" id="scrollInd">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADLINE fixed outside scroll-scene so it's never clipped -->
+  <div class="scene-headline" id="sceneHeadline" aria-label="Building Digital Experiences">
+    <div class="sh-word" id="shw0">
+      <span class="sh-char">B</span><span class="sh-char">u</span><span class="sh-char">i</span><span class="sh-char">l</span><span class="sh-char">d</span><span class="sh-char">i</span><span class="sh-char">n</span><span class="sh-char">g</span>
+    </div>
+    <div class="sh-word sh-word-gradient" id="shw1">
+      <span class="sh-char">D</span><span class="sh-char">i</span><span class="sh-char">g</span><span class="sh-char">i</span><span class="sh-char">t</span><span class="sh-char">a</span><span class="sh-char">l</span>
+    </div>
+    <div class="sh-word" id="shw2">
+      <span class="sh-char">E</span><span class="sh-char">x</span><span class="sh-char">p</span><span class="sh-char">e</span><span class="sh-char">r</span><span class="sh-char">i</span><span class="sh-char">e</span><span class="sh-char">n</span><span class="sh-char">c</span><span class="sh-char">e</span><span class="sh-char">s</span><span class="sh-char">.</span>
+    </div>
+  </div>
+
+
+  <!-- ═══ MARQUEE STRIP ═══ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Web Design</span><span class="mdot">✦</span><span>UI / UX</span><span class="mdot">✦</span><span>WordPress</span><span class="mdot">✦</span><span>Figma</span><span class="mdot">✦</span><span>Branding</span><span class="mdot">✦</span><span>GitHub Pages</span><span class="mdot">✦</span><span>Mobile-First</span><span class="mdot">✦</span><span>Performance</span><span class="mdot">✦</span>
+      <span>Web Design</span><span class="mdot">✦</span><span>UI / UX</span><span class="mdot">✦</span><span>WordPress</span><span class="mdot">✦</span><span>Figma</span><span class="mdot">✦</span><span>Branding</span><span class="mdot">✦</span><span>GitHub Pages</span><span class="mdot">✦</span><span>Mobile-First</span><span class="mdot">✦</span><span>Performance</span><span class="mdot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about">
+    <div class="scroll-word-wrap"><div class="scroll-word" id="swAbout">PEQATECH</div></div>
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-left">
+          <p class="section-eyebrow reveal-up">Who We Are</p>
+          <h2 class="section-title reveal-up" data-delay="1">A digital studio powered by<br><em>passion & AI tools.</em></h2>
+          <p class="about-body reveal-up" data-delay="2">Peqa Technology (PeqaTech) is a Malaysia-registered digital studio specialising in web design, development, and digital strategy. We leverage modern tools, AI, and proven templates to deliver polished, professional websites — efficiently and affordably.</p>
+          <p class="about-body reveal-up" data-delay="3">Founded in 2018 and registered with Suruhanjaya Syarikat Malaysia (SSM) under <strong>PG0510758-T</strong>, we have delivered over 50 projects — from one-page portfolios to full corporate websites and conference platforms. We work with founders, brands, and businesses who want results without the agency price tag.</p>
+          <div class="about-tags reveal-up" data-delay="4">
+            <span class="tag">Web Design</span><span class="tag">UI/UX</span><span class="tag">WordPress</span><span class="tag">Figma</span><span class="tag">Branding</span><span class="tag">GitHub Pages</span>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="glow-card reveal-up" data-delay="2" id="aboutCard">
+            <div class="glow-sweep" id="aboutSweep"></div>
+            <div class="about-card-grid">
+              <div class="mini-card"><div class="mini-icon">🎨</div><h3>Design-Led</h3><p>Every project starts with design thinking, not code.</p></div>
+              <div class="mini-card"><div class="mini-icon">🛠️</div><h3>Tool-Powered</h3><p>We use the best AI tools and templates to move fast.</p></div>
+              <div class="mini-card"><div class="mini-icon">📱</div><h3>Mobile-First</h3><p>Responsive and tested across all screen sizes.</p></div>
+              <div class="mini-card"><div class="mini-icon">🤝</div><h3>Reliable Delivery</h3><p>On-time, on-brief, with clear communication throughout.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-orb" style="background:rgba(124,58,237,.07);top:-100px;left:-200px;"></div>
+  </section>
+
+  <!-- ═══ PORTFOLIO ═══ -->
+  <section id="portfolio">
+    <div class="scroll-word-wrap"><div class="scroll-word" id="swPortfolio">WORK</div></div>
+    <div class="section-inner">
+      <p class="section-eyebrow reveal-up">Our Work</p>
+      <h2 class="section-title reveal-up" data-delay="1">Selected Projects</h2>
+      <p class="section-sub reveal-up" data-delay="2">A curated selection of websites built for our clients.</p>
+
+      <div class="pf-filters reveal-up" data-delay="3">
+        <button class="pf-filter active" data-cat="all">All</button>
+        <button class="pf-filter" data-cat="one-page">One-Page</button>
+        <button class="pf-filter" data-cat="multi-page">Multi-Page</button>
+        <button class="pf-filter" data-cat="ecommerce">E-Commerce</button>
+      </div>
+
+      <div class="portfolio-grid" id="pfGrid">
+
+        <a href="https://peqatech.github.io/schwimelite/" target="_blank" rel="noopener" class="pf-card reveal-up" data-delay="1" data-cat="one-page">
+          <div class="pf-img pf-light">
+            <div class="pf-sweep"></div>
+            <img src="img/portfolio/Portfolio - Schwimelite.png" alt="Schwimelite" style="width:100%;height:100%;object-fit:cover;"/>
+            <div class="pf-overlay"><span class="pf-btn">↗ View Live</span></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-meta"><span class="pf-tag">One-Page</span></div>
+            <h3 class="pf-title">Schwimelite</h3>
+            <p class="pf-desc">Elegant site for private and small group swimming lessons for ladies and children in KL.</p>
+          </div>
+        </a>
+
+        <a href="https://www.jamalamin.com.my/" target="_blank" rel="noopener" class="pf-card reveal-up" data-delay="2" data-cat="multi-page">
+          <div class="pf-img pf-light">
+            <div class="pf-sweep"></div>
+            <img src="img/portfolio/Portfolio - Jamal Amin & Partners.png" alt="Jamal Amin & Partners" style="width:100%;height:100%;object-fit:cover;"/>
+            <div class="pf-overlay"><span class="pf-btn">↗ View Live</span></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-meta"><span class="pf-tag">Multi-Page</span></div>
+            <h3 class="pf-title">Jamal Amin &amp; Partners</h3>
+            <p class="pf-desc">Corporate accounting firm website in Kuala Lumpur — services, team and contact.</p>
+          </div>
+        </a>
+
+        <a href="https://www.pragmaxconsulting.com/" target="_blank" rel="noopener" class="pf-card reveal-up" data-delay="3" data-cat="multi-page">
+          <div class="pf-img pf-light">
+            <div class="pf-sweep"></div>
+            <img src="img/portfolio/Portfolio - Pragmax Consulting.png" alt="Pragmax Consulting" style="width:100%;height:100%;object-fit:cover;"/>
+            <div class="pf-overlay"><span class="pf-btn">↗ View Live</span></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-meta"><span class="pf-tag">Multi-Page</span></div>
+            <h3 class="pf-title">Pragmax Consulting</h3>
+            <p class="pf-desc">Multi-page site for compliance, risk management, and governance solutions.</p>
+          </div>
+        </a>
+
+        <a href="https://hapadvisory.com/" target="_blank" rel="noopener" class="pf-card reveal-up" data-delay="1" data-cat="one-page">
+          <div class="pf-img pf-light">
+            <div class="pf-sweep"></div>
+            <img src="img/portfolio/Portfolio - HAP Advisory.png" alt="HAP Advisory" style="width:100%;height:100%;object-fit:cover;"/>
+            <div class="pf-overlay"><span class="pf-btn">↗ View Live</span></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-meta"><span class="pf-tag">One-Page</span></div>
+            <h3 class="pf-title">HAP Advisory</h3>
+            <p class="pf-desc">Finance, taxation, valuation, and business advisory firm — clean one-page presence.</p>
+          </div>
+        </a>
+
+        <a href="https://peqatech.github.io/nurafeeqah/" target="_blank" rel="noopener" class="pf-card reveal-up" data-delay="2" data-cat="one-page">
+          <div class="pf-img pf-light">
+            <div class="pf-sweep"></div>
+            <img src="img/portfolio/Portfolio - NurAfeeqah.png" alt="NurAfeeqah Portfolio" style="width:100%;height:100%;object-fit:cover;"/>
+            <div class="pf-overlay"><span class="pf-btn">↗ View Live</span></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-meta"><span class="pf-tag">One-Page</span></div>
+            <h3 class="pf-title">Ts. Nur Afeeqah</h3>
+            <p class="pf-desc">Personal freelance web designer portfolio — showcasing work, services and contact.</p>
+          </div>
+        </a>
+
+        <a href="https://peqatech.github.io/nurafeeqah/maisonvera" target="_blank" rel="noopener" class="pf-card reveal-up" data-delay="3" data-cat="ecommerce">
+          <div class="pf-img pf-light">
+            <div class="pf-sweep"></div>
+            <img src="img/portfolio/Portfolio - Maison Vera.png" alt="Maison Vera" style="width:100%;height:100%;object-fit:cover;"/>
+            <div class="pf-overlay"><span class="pf-btn">↗ View Live</span></div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-meta"><span class="pf-tag">E-Commerce</span></div>
+            <h3 class="pf-title">Maison Vera</h3>
+            <p class="pf-desc">Luxury fashion e-commerce store with editorial design, cart and product catalogue.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+    <div class="section-orb" style="background:rgba(59,130,246,.07);bottom:-100px;right:-100px;"></div>
+  </section>
+
+  <!-- ═══ BIG STATEMENT ═══ -->
+  <div class="big-statement" id="bigStatement" aria-hidden="true">
+    <div class="bs-words">
+      <span class="bs-w" id="bsw1">Premium.</span>
+      <span class="bs-w bs-outline" id="bsw2">Impactful.</span>
+    </div>
+  </div>
+
+  <!-- ═══ PRICING ═══ -->
+  <section id="pricing">
+    <div class="scroll-word-wrap"><div class="scroll-word" id="swPricing">PRICING</div></div>
+    <div class="section-inner">
+      <p class="section-eyebrow reveal-up">Transparent Pricing</p>
+      <h2 class="section-title reveal-up" data-delay="1">Choose Your Plan</h2>
+      <p class="section-sub reveal-up" data-delay="2">No hidden fees. No surprises. Starting from RM199.</p>
+      <div class="pricing-grid">
+        <div class="price-card featured reveal-up" data-delay="1">
+          <div class="price-badge">★ POPULAR</div>
+          <div class="price-tier">Starter</div>
+          <div class="price-name">One-Page</div>
+          <div class="price-desc">Perfect for portfolios, freelancers, personal brands and one page presence.</div>
+          <div class="price-amount"><span class="price-cur">RM</span><span class="price-num">199</span><span class="price-old">RM399</span></div>
+          <p class="price-note">one-time payment</p>
+          <ul class="price-feats">
+            <li><span class="ck">✓</span>1 Page Design</li>
+            <li><span class="ck">✓</span>Mobile Responsive</li>
+            <li><span class="ck">✓</span>First year .com domain</li>
+            <li><span class="ck">✓</span>GitHub Pages Hosting</li>
+            <li><span class="ck">✓</span>2 Rounds of Revision</li>
+            <li><span class="cx">✗</span>Blog / CMS</li>
+            <li><span class="cx">✗</span>Payment Gateway</li>
+          </ul>
+          <a href="https://wa.me/60166013291" target="_blank" rel="noopener" class="price-btn">Get Started</a>
+          <p class="price-tnc">Fully prompted using AI with minimal customisation.</p>
+        </div>
+        <div class="price-card reveal-up" data-delay="2">
+          <div class="price-tier">Professional</div>
+          <div class="price-name">Multi-Page</div>
+          <div class="price-desc">Great for businesses and corporate that need a full, multi-page presence.</div>
+          <div class="price-amount"><span class="price-cur">RM</span><span class="price-num">499</span><span class="price-old">RM999</span></div>
+          <p class="price-note">one-time payment</p>
+          <ul class="price-feats">
+            <li><span class="ck">✓</span>Up to 5 Pages</li>
+            <li><span class="ck">✓</span>Mobile Responsive</li>
+            <li><span class="ck">✓</span>First year .com domain</li>
+            <li><span class="ck">✓</span>WordPress / Wix Setup*</li>
+            <li><span class="ck">✓</span>3 Rounds of Revision</li>
+            <li><span class="ck">✓</span>Blog / CMS</li>
+            <li><span class="cx">✗</span>Payment Gateway</li>
+          </ul>
+          <a href="https://wa.me/60166013291" target="_blank" rel="noopener" class="price-btn">Get Started</a>
+          <p class="price-tnc">* Hosting fees not included — paid annually to your service provider.</p>
+        </div>
+        <div class="price-card reveal-up" data-delay="3">
+          <div class="price-tier">Business</div>
+          <div class="price-name">E-commerce</div>
+          <div class="price-desc">Online shop with integration with online payment gateway.</div>
+          <div class="price-amount"><span class="price-cur">RM</span><span class="price-num">4999</span><span class="price-old">RM9999</span></div>
+          <p class="price-note">one-time payment</p>
+          <ul class="price-feats">
+            <li><span class="ck">✓</span>Up to 10 Pages</li>
+            <li><span class="ck">✓</span>Mobile Responsive</li>
+            <li><span class="ck">✓</span>First year .com domain</li>
+            <li><span class="ck">✓</span>WordPress Setup*</li>
+            <li><span class="ck">✓</span>3 Rounds of Revision</li>
+            <li><span class="ck">✓</span>Blog / CMS</li>
+            <li><span class="ck">✓</span>WooCommerce with Payment Gateway</li>
+          </ul>
+          <a href="https://wa.me/60166013291" target="_blank" rel="noopener" class="price-btn">Get Started</a>
+          <p class="price-tnc">* Hosting fees not included — paid annually to your service provider.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-orb" style="background:rgba(124,58,237,.06);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section id="testimonials">
+    <div class="scroll-word-wrap"><div class="scroll-word" id="swTestimonials">CLIENTS</div></div>
+    <div class="section-inner">
+      <p class="section-eyebrow reveal-up">Happy Clients</p>
+      <h2 class="section-title reveal-up" data-delay="1">What They Say</h2>
+      <div class="testi-wrap reveal-up" data-delay="2">
+        <div class="testi-track" id="testiTrack">
+          <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-body">"PeqaTech built our company website from scratch and delivered beyond expectations. Fast, beautiful, and clients constantly compliment it."</p><div class="testi-author"><div class="testi-av">AF</div><div><div class="testi-name">Ahmad Farhan</div><div class="testi-role">CEO, TechBridge Sdn Bhd</div></div></div></div>
+          <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-body">"Super professional and responsive! She understood my vision perfectly and turned it into a gorgeous portfolio. The effects are stunning."</p><div class="testi-author"><div class="testi-av">SN</div><div><div class="testi-name">Siti Norzahra</div><div class="testi-role">Freelance Photographer</div></div></div></div>
+          <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-body">"Needed a conference site in 2 weeks — delivered in 10 days. Registrations went up 3× compared to our old page. Worth every ringgit!"</p><div class="testi-author"><div class="testi-av">HM</div><div><div class="testi-name">Dr. Hazwan Malik</div><div class="testi-role">Conference Chair, UITM</div></div></div></div>
+          <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-body">"Our F&amp;B site redesign gets us direct bookings now. Mobile experience is flawless. Communication was smooth throughout the project."</p><div class="testi-author"><div class="testi-av">NA</div><div><div class="testi-name">Nurul Aina</div><div class="testi-role">Owner, Kafe Aina PJ</div></div></div></div>
+          <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-body">"Rare mix of design taste and technical skill. Our site scored 97 on PageSpeed after optimisation. We will definitely work together again."</p><div class="testi-author"><div class="testi-av">RH</div><div><div class="testi-name">Rizal Hamdan</div><div class="testi-role">CTO, Reka Digital</div></div></div></div>
+          <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-body">"Affordable, fast, and genuinely talented. My portfolio now gets consistent enquiries every week. Best investment I made for my brand."</p><div class="testi-author"><div class="testi-av">LR</div><div><div class="testi-name">Liyana Rashid</div><div class="testi-role">Makeup Artist &amp; Educator</div></div></div></div>
+        </div>
+      </div>
+      <div class="testi-nav">
+        <button class="testi-btn" id="testiPrev">←</button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-btn" id="testiNext">→</button>
+      </div>
+    </div>
+    <div class="section-orb" style="background:rgba(52,211,153,.05);top:0;right:-100px;"></div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal-up">Get In Touch</p>
+      <h2 class="section-title reveal-up" data-delay="1">Let's Build Something<br><em>Together.</em></h2>
+      <p class="section-sub reveal-up" data-delay="2">Ready to bring your vision to life? Reach out and let's talk.</p>
+      <div class="ssm-badge reveal-up" data-delay="3">
+        <span class="ssm-icon">🏛️</span>
+        <span>SSM Registered · Peqa Technology (PG0510758-T)</span>
+      </div>
+      <div class="contact-grid">
+        <a href="https://wa.me/60166013291" target="_blank" rel="noopener" class="contact-card reveal-up" data-delay="1">
+          <div class="cc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div>
+          <div class="cc-info"><div class="cc-lbl">WhatsApp</div><div class="cc-val">+60 16-601 3291</div></div>
+          <div class="cc-arrow">↗</div>
+        </a>
+        <a href="mailto:peqatech@nurafeeqah.com" class="contact-card reveal-up" data-delay="2">
+          <div class="cc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="cc-info"><div class="cc-lbl">Email</div><div class="cc-val">peqatech@nurafeeqah.com</div></div>
+          <div class="cc-arrow">↗</div>
+        </a>
+        <div class="contact-card reveal-up" data-delay="3">
+          <div class="cc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="cc-info"><div class="cc-lbl">Location</div><div class="cc-val">Remote — Malaysia</div></div>
+          <div class="cc-arrow">📍</div>
+        </div>
+      </div>
+
+      <!-- Founder card -->
+      <div class="founder-strip reveal-up" data-delay="4" id="founderCard">
+        <div class="founder-avatar-wrap">
+          <div class="founder-circle">
+            <img src="https://media.licdn.com/dms/image/v2/D5603AQEaY6-2M62OdA/profile-displayphoto-shrink_800_800/B56ZaG6mWVGoAg-/0/1746020232146?e=1780531200&v=beta&t=qlq_2IP0Fv74zSfYH1jFBx7hpa8Sbh3tQvPKH74gm8w" alt="Ts. Nur Afeeqah — Founder of PeqaTech"/>
+          </div>
+          <div class="founder-online"></div>
+        </div>
+        <div class="founder-info">
+          <div class="founder-name-row">
+            <span class="founder-name">Ts. Nur Afeeqah</span>
+            <span class="founder-role-pill">✦ Founder &amp; Designer</span>
+          </div>
+          <p class="founder-bio">The person behind PeqaTech. A Kuala Lumpur-based web designer with 7+ years of experience helping businesses across Malaysia build beautiful, high-performing digital presences — from personal portfolios to corporate websites and conference platforms. Working full-time while running PeqaTech on the side, she brings both professional discipline and creative passion to every project.</p>
+          <div class="founder-socials">
+            <a href="https://www.linkedin.com/in/nurafeeqah/" target="_blank" rel="noopener" class="fsoc"><span class="fsoc-icon">in</span>LinkedIn</a>
+            <a href="https://instagram.com/nurafeeqah" target="_blank" rel="noopener" class="fsoc"><span class="fsoc-icon">ig</span>Instagram</a>
+            <a href="https://x.com/nurafeeqah" target="_blank" rel="noopener" class="fsoc"><span class="fsoc-icon">𝕏</span>Twitter / X</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-orb" style="background:rgba(124,58,237,.09);bottom:-200px;left:50%;transform:translateX(-50%);"></div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="#" class="logo" id="logoLink"><span class="logo-mark">Peqa</span><span class="logo-text">Tech</span></a>
+        <p class="footer-byline">by Ts. Nur Afeeqah</p>
+        <p class="footer-tag">Building premium digital experiences.<br>Remote — Malaysia.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/nurafeeqah/" target="_blank" rel="noopener">in</a>
+        <a href="https://instagram.com/nurafeeqah" target="_blank" rel="noopener">ig</a>
+        <a href="https://x.com/nurafeeqah" target="_blank" rel="noopener">𝕏</a>
+        <a href="https://wa.me/60166013291" target="_blank" rel="noopener">wa</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2018 – 2026 Peqa Technology (PG0510758-T) · SSM Registered · All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
