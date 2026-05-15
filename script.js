@@ -154,8 +154,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     const progress    = clamp(raw / scrollable, 0, 1); // 0→1 across the whole scene
 
     /* ─ All chars start fully lit ─ */
-    /* ─ Dim OFF left→right from 55% scroll onwards, completes at 90% ─ */
-    const dimP   = mapRange(progress, 0.55, 0.90, 0, 1);
+    /* ─ Dim OFF left→right from 50% scroll onwards ─ */
+    const dimP   = mapRange(progress, 0.50, 0.85, 0, 1);
     const dimUpTo = Math.floor(easeOut(dimP) * totalChars);
 
     chars.forEach((ch, i) => {
