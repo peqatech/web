@@ -12,7 +12,7 @@
   --hh:72px;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--w);overflow-x:hidden;line-height:1.65;cursor:none;}
 img{display:block;max-width:100%;}
 a{text-decoration:none;color:inherit;}
@@ -197,7 +197,7 @@ section{position:relative;overflow:hidden;z-index:10;}
 @keyframes mR{from{transform:translateX(-50%);}to{transform:translateX(0);}}
 
 /* SCROLL WORDS */
-.scroll-word-wrap{position:absolute;top:5%;right:0;left:auto;width:100%;pointer-events:none;overflow:hidden;z-index:0;text-align:right;}
+.scroll-word-wrap{position:absolute;top:5%;right:0;left:auto;width:100%;pointer-events:none;overflow:hidden;z-index:0;text-align:right;contain:paint;}
 .scroll-word-right-wrap{text-align:right;}
 .scroll-word{font-size:clamp(5rem,15vw,17rem);font-weight:900;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.055);white-space:nowrap;will-change:transform;display:inline-block;}
 
