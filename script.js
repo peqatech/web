@@ -163,8 +163,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
       else ch.classList.add('lit');
     });
 
-    /* ─ Phase 1: Only scroll indicator fades ─ */
-    if(scrollInd) scrollInd.style.opacity = 1 - mapRange(progress, 0.04, 0.20, 0, 1);
+    /* ─ Phase 1: Only scroll indicator fades (slow) ─ */
+    if(scrollInd) scrollInd.style.opacity = 1 - mapRange(progress, 0.08, 0.35, 0, 1);
 
     /* ─ Headline stays fully visible — hidden only when About covers it ─ */
     headline.style.opacity   = 1;
