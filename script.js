@@ -154,8 +154,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     const progress    = clamp(raw / scrollable, 0, 1); // 0→1 across the whole scene
 
     /* ─ All chars start fully lit ─ */
-    /* ─ Dim OFF left→right from 50% scroll onwards ─ */
-    const dimP   = mapRange(progress, 0.50, 0.85, 0, 1);
+    /* ─ Dim OFF left→right from 55% scroll onwards, completes at 90% ─ */
+    const dimP   = mapRange(progress, 0.55, 0.90, 0, 1);
     const dimUpTo = Math.floor(easeOut(dimP) * totalChars);
 
     chars.forEach((ch, i) => {
@@ -163,8 +163,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
       else ch.classList.add('lit');
     });
 
-    /* ─ Phase 1: Only scroll indicator fades ─ */
-    if(scrollInd) scrollInd.style.opacity = 1 - mapRange(progress, 0.04, 0.20, 0, 1);
+    /* ─ Phase 1: Only scroll indicator fades (slow) ─ */
+    if(scrollInd) scrollInd.style.opacity = 1 - mapRange(progress, 0.08, 0.35, 0, 1);
 
     /* ─ Headline stays fully visible — hidden only when About covers it ─ */
     headline.style.opacity   = 1;
